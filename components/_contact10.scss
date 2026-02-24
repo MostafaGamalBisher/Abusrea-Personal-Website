@@ -1,0 +1,112 @@
+.contact {
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20rem;
+  align-items: center;
+  position: relative;
+}
+
+.contact__description {
+  font-size: var(--font-size-20);
+  line-height: 1.9;
+}
+
+.contact__email {
+  font-weight: var(--font-weight-bold);
+  margin: 2.5rem 0;
+}
+
+.contact__social {
+  transition: var(--transition-timing);
+}
+
+.contact__social:hover {
+  transform: scale(1.2);
+}
+
+.contact__inputs {
+  display: flex;
+  gap: 3rem;
+}
+
+.input {
+  border: 0;
+  background: transparent;
+  border-bottom: 0.1rem solid var(--color-input-border);
+  flex: 1;
+  outline: 0;
+}
+
+.message {
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.button {
+  background-color: var(--color-link-bg);
+  color: var(--color-white);
+  padding: 1.7rem 1.8rem;
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-medium);
+  margin-top: 3.4rem;
+}
+
+form:invalid::after {
+  content: "*";
+  font-size: var(--font-size-38);
+  color: var(--color-red);
+}
+
+.like__button {
+  /* content: ""; */
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  right: 1rem;
+  bottom: -10rem;
+  z-index: 2;
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 5px var(--color-heart-shadow);
+  transition: ease-in-out;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-red);
+}
+
+@keyframes button_pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.like__button:hover {
+  animation: button_pulse 1.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.icon {
+  animation: pulse 1s ease infinite;
+}

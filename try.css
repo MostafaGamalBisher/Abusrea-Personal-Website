@@ -1,0 +1,41 @@
+:root {
+  --bg-color: rgb(0, 0, 0);
+}
+
+.container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  justify-items: center;
+  padding-top: 20px;
+  color: white;
+}
+.style {
+  border: 0.5px solid rgba(0, 0, 0, var(--bg-color));
+  box-shadow: 0 0 4px var(--bg-color);
+  padding: 50px;
+  background-color: var(--bg-color);
+  transition: filter 0.9s ease-in-out, transform 0.9s ease-in-out,
+    box-shadow 0.9s ease-in-out, opacity 0.9s ease-in-out;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.ball {
+  border-radius: 50%;
+}
+
+.style:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 0 0 15px 0px var(--bg-color);
+  /* filter: blur(0px); */
+}
+
+.container:has(.style:hover) .style:not(:hover) {
+  filter: blur(3px);
+  opacity: 0.5;
+}

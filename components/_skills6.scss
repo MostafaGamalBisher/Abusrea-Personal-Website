@@ -1,0 +1,25 @@
+.skills__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 5rem;
+}
+
+.skills__title {
+  font-size: var(--font-size-38);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.skills__years {
+  font-size: var(--font-size-20);
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.skills__item {
+  transition: var(--transition-timing);
+  user-select: none;
+}
+
+.skills__item:hover {
+  text-shadow: 0px 0px 2px var(--color-green);
+}

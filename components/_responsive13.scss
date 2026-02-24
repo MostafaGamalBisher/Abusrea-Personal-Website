@@ -1,0 +1,116 @@
+@media (max-width: 1000px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    row-gap: 8rem;
+  }
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .navigation_link {
+    margin: 0 0.5rem;
+  }
+  .navigation_list:has(.navigation_link:hover) .navigation_link:not(:hover) {
+    filter: none;
+    opacity: none;
+  }
+  .bio__pic-content {
+    grid-row: 1;
+    justify-self: center;
+    margin-bottom: 4rem;
+  }
+  .skills__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects__main {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 6rem;
+  }
+  .projects__data:nth-of-type(2) {
+    order: 1;
+  }
+  .clients__opinions {
+    font-size: var(--font-size-24);
+  }
+  .contact {
+    row-gap: 6rem;
+  }
+  .contact__formcontent {
+    order: -1;
+  }
+  .like__button {
+    bottom: -7rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .bio__pic {
+    width: 100%;
+  }
+
+  .header {
+    padding: 0;
+  }
+
+  .toggle {
+    padding: 3rem 0;
+  }
+
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 3rem 0;
+  }
+
+  .burger-menu__bar {
+    height: 0.3rem;
+    width: 4.375rem;
+    background-color: var(--color-text);
+    transition: var(--transition-timing);
+  }
+
+  .header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-of-type(1) {
+    transform: translateY(5px) translateX(0px) rotate(-65deg);
+    background-color: var(--color-text);
+    width: 2.375rem;
+  }
+  .header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-of-type(2) {
+    transform: translateY(10px) translateX(5.5px);
+    background-color: var(--color-text);
+    width: 2.375rem;
+  }
+  .header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-of-type(3) {
+    transform: translateY(-12px) translateX(12px) rotate(65deg);
+    background-color: var(--color-text);
+    width: 2.375rem;
+  }
+
+  .navigation_link:link,
+  .navigation_link:visited {
+    all: unset;
+    /* transition: transform 0.7s ease-in-out; */
+  }
+  .navigation {
+    width: 100vw;
+    padding: 3rem 0;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+
+    border-bottom: 0.1rem solid var(--color-text);
+    background-color: var(--color-background);
+    transition: var(--transition-timing);
+  }
+  .navigation_list {
+    justify-content: center;
+  }
+  .burger-menu__checkbox:checked + .navigation {
+    top: 100%;
+  }
+}

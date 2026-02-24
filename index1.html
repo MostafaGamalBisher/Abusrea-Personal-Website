@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Mostafa Gamal Bisher</title>
+  </head>
+  <body>
+    <div class="container">
+      <video class="video__loop" autoplay loop muted>
+        <source src="./video-loop.mp4" />
+      </video>
+
+      <header class="header">
+        <label class="burger-menu" for="menu">
+          <div class="burger-menu__bar"></div>
+          <div class="burger-menu__bar"></div>
+          <div class="burger-menu__bar"></div>
+        </label>
+        <input id="menu" class="burger-menu__checkbox" type="checkbox" />
+
+        <nav class="navigation">
+          <ul class="navigation_list">
+            <li class="nav__style">
+              <a href="#bio" class="navigation_link navigation_bio">Bio</a>
+            </li>
+            <li class="nav__style">
+              <a href="#skills" class="navigation_link navigation_skills"
+                >Skills</a
+              >
+            </li>
+            <li class="nav__style">
+              <a href="#media" class="navigation_link navigation_media"
+                >Media</a
+              >
+            </li>
+            <li class="nav__style">
+              <a href="#projects" class="navigation_link navigation_projects"
+                >Projects</a
+              >
+            </li>
+            <li class="nav__style">
+              <a href="#clients" class="navigation_link navigation_clients"
+                >My Clients</a
+              >
+            </li>
+            <li class="nav__style">
+              <a href="#contact" class="navigation_link navigation_contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="toggle">
+          <h3 class="toggle__title">Switch Theme</h3>
+          <input type="checkbox" class="toggle__checkbox" id="toggle" />
+          <label for="toggle" class="toggle__label"></label>
+        </div>
+      </header>
+
+      <section class="bio section" id="bio">
+        <div class="bio__data">
+          <h1 class="bio__heading">
+            Hi There, I’M A Passionate Software Engineer
+          </h1>
+          <p class="bio__objective">
+            My name is <span class="bio__name">Mohamed Abusrea</span>, a
+            co-founder of
+            <a href="https://almdrasa.com/" class="bio__almdrasa"
+              >Almdrasa.com</a
+            >
+            , Software Engineer and a content creator who publish content on
+            <a href="#" class="bio__facebook">Facebook</a>,
+            <a href="#" class="bio__twitter">Twitter</a>,
+            <a href="#" class="bio__linkedin">LinkedIn</a> and
+            <a href="#" class="bio__youtube">Youtube</a>.
+          </p>
+          <a href="#contact" class="bio__links say-hi-link">Say Hi</a>
+          <a
+            href="./assets/mohamedAbusreaResume.pdf"
+            class="bio__links find-out-link"
+            target="_blank"
+            >Download CV <span class="bio__arrow">⬇</span>
+          </a>
+        </div>
+        <div class="bio__pic-content">
+          <img
+            class="bio__pic"
+            src="images/personal-pic.png"
+            alt="picture of Mohamed Abusrea"
+          />
+        </div>
+      </section>
+
+      <section class="skills section section--with-bg" id="skills">
+        <h2 class="h2-heading">skills</h2>
+        <ul class="skills__list">
+          <li class="skills__item">
+            <h2 class="skills__title">HTML</h2>
+            <span class="skills__years">8 years</span>
+          </li>
+          <li class="skills__item">
+            <h2 class="skills__title">CSS</h2>
+            <span class="skills__years">8 years</span>
+          </li>
+          <li class="skills__item">
+            <h2 class="skills__title">Javascript</h2>
+            <span class="skills__years">8 years</span>
+          </li>
+          <li class="skills__item">
+            <h2 class="skills__title">React</h2>
+            <span class="skills__years">4 years</span>
+          </li>
+          <li class="skills__item">
+            <h2 class="skills__title">Redux</h2>
+            <span class="skills__years">3 years</span>
+          </li>
+          <li class="skills__item">
+            <h2 class="skills__title">React testing library</h2>
+            <span class="skills__years">1 year</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="media section" id="media">
+        <video class="media__video" poster="./images/thumbnail.jpg" controls>
+          <source src="./video.mp4" />
+        </video>
+      </section>
+
+      <section class="projects section" id="projects">
+        <h2 class="h2-heading">
+          my featured <br />
+          projects
+        </h2>
+        <div class="projects__main">
+          <img
+            src="./images/project-1.jpg"
+            alt="QuranTab image"
+            class="projects__img"
+          />
+          <div class="projects__data">
+            <h3 class="h3__heading">Quran Tab <br />Extension</h3>
+            <p class="projects__description">
+              Quran Tab is an Islamic new tab page that will keep you inspired
+              by a verse from the Quran every time you open a new tab that helps
+              you achieve your "Khatma" and keeps you connected with the words
+              of Allah.
+            </p>
+            <a href="#" class="projects_link">Chrome Link</a><span> - </span
+            ><a href="#" class="projects_link">Edge Link</a>
+          </div>
+
+          <div class="projects__data">
+            <h3 class="h3__heading">
+              Quran Station <br />
+              Extension
+            </h3>
+            <p class="projects__description">
+              Small extension that gives you access to over 100 stations to help
+              you listen to the Quran from your favorite reciters easily
+              Quran-Station has over 100 stations to help you listen to the
+              Quran from your favorite reciters in a quick and easy way.
+            </p>
+            <a href="#" class="projects_link">Chrome Link</a><span> - </span>
+            <a href="#" class="projects_link">Firefox Link</a><span> - </span>
+            <a href="#" class="projects_link">Edge Link</a>
+          </div>
+          <img
+            src="./images/project-2.jpg"
+            alt="Quranstation image"
+            class="projects__img"
+          />
+        </div>
+      </section>
+
+      <section id="clients" class="clients section section--with-bg">
+        <h2 class="h2-heading">
+          What My <br />
+          Clients Say
+        </h2>
+        <div class="clients__opinions">
+          <div class="clients__wrapper">
+            <p class="clients__opinion">
+              Abusrea has the advantageous ability to understand a problem and
+              implement code to a high standard within the deadline. Each
+              project we have worked on, I know I can completely trust Abusrea
+              to own his tasks and complete what is needed when asked of him.
+            </p>
+            <p class="clients__opinion">
+              Mohamed will patiently listen to you and give you his own Ideas as
+              well, and in the end, he comes up with something completely
+              different from what you’re expecting, but the good news is, you’ll
+              always love it.
+            </p>
+            <p class="clients__opinion">
+              I had a chance to work closely with Mohamed as a direct manager
+              from hist first day at DeliveryHero until my last day there
+              (6+months). Mohamed's biggest strengths that I admire are taking
+              initiatives on personal and team level, and driving them.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div>
+          <p class="contact__description">
+            Feel free to reach out to me any time. I prefer to talk over email,
+            especially since we may be a few time zones away.
+          </p>
+
+          <a
+            href="mailto: mostafagamalbisher@outlook.com"
+            class="contact__email"
+            >mostafagamalbisher@outlook.com</a
+          >
+          <div class="contact__socials">
+            <a href="" class="contact__social"
+              ><img src="./images/brand/facebook.svg" alt="picture of facebook"
+            /></a>
+            <a href="" class="contact__social"
+              ><img src="./images/brand/twitter.svg" alt="picture of twitter "
+            /></a>
+            <a href="" class="contact__social"
+              ><img src="./images/brand/youtube.svg" alt="picture of youtube"
+            /></a>
+            <a href="" class="contact__social"
+              ><img src="./images/brand/github.svg" alt="picture of github"
+            /></a>
+            <a href="" class="contact__social"
+              ><img
+                src="./images/brand/instagram.svg"
+                alt="picture of instagram.svg"
+            /></a>
+            <a href="" class="contact__social"
+              ><img
+                src="./images/brand/LinkedIn.svg"
+                alt="picture of linkedin.svg"
+            /></a>
+          </div>
+        </div>
+        <div class="contact__formcontent">
+          <h2 class="h2-heading">
+            Let’s Work <br />
+            Together!
+          </h2>
+          <form action="results.html">
+            <div class="contact__inputs">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Full Name"
+                class="full__name input"
+                required
+              />
+              <input
+                type="tel"
+                id="phone"
+                name="phone no."
+                placeholder="Phone No."
+                inputmode="numeric"
+                class="phone input"
+                required
+              />
+            </div>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="your message"
+              class="message input"
+              rows="1"
+              required
+            ></textarea>
+            <input type="submit" value="Send Message" class="button" />
+          </form>
+
+          <a
+            type="button"
+            class="like__button"
+            target="_blank"
+            href="https://buymeacoffee.com/mostafagamalbisher?new=1"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon lucide lucide-hand-heart-icon lucide-hand-heart"
+            >
+              <path
+                d="M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"
+                data--h-bstatus="0OBSERVED"
+              />
+              <path
+                d="m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95"
+                data--h-bstatus="0OBSERVED"
+              />
+              <path d="m2 15 6 6" data--h-bstatus="0OBSERVED" />
+              <path
+                d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91"
+                data--h-bstatus="0OBSERVED"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <footer class="footer">© 2022 by Mohamed Abusrea</footer>
+    </div>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
