@@ -11,9 +11,10 @@ const modifySkills = (parent, selector1, newText1, selector2, newText2) => {
   if (element2) element2.textContent = newText2;
 };
 
-const skillsItem = document.querySelectorAll(`.skills__item`);
-modifySkills(skillsItem[4], "h2", "Node.js");
-modifySkills(skillsItem[5], "h2", "MongoDB", "span", "10 Years");
+const skillsItems = document.querySelectorAll(`.skills__item`);
+
+modifySkills(skillsItems[4], "h2", "Node.js");
+modifySkills(skillsItems[5], "h2", "MongoDB", "span", "10 Years");
 
 const listElement = `
           <li class="skills__item">
@@ -23,5 +24,17 @@ const listElement = `
 `;
 document.createRange().createContextualFragment(listElement);
 
-const skillsList = document.querySelectorAll(".skills__item");
-skillsList[3].insertAdjacentHTML("beforebegin", listElement);
+skillsItems[3].insertAdjacentHTML("beforebegin", listElement);
+
+const list = document.querySelector(".skills__list");
+
+list.addEventListener("click", (e) => {
+  const item = e.target.closest(".skills__item");
+  if (!item) return;
+
+  document
+    .querySelectorAll(".skills__item")
+    .forEach((el) => el.classList.remove("active"));
+
+  item.classList.add("active");
+});
