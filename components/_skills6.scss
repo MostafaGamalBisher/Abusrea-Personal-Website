@@ -1,3 +1,6 @@
+.skills {
+  grid-template-columns: 1fr;
+}
 .skills__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -19,12 +22,24 @@
 .skills__item {
   transition: var(--transition-timing);
   user-select: none;
+  position: relative;
+  display: inline-block;
 }
 
 .skills__item:hover {
   text-shadow: 0px 0px 2px var(--color-green);
 }
 
-.active {
-  text-decoration: underline;
+.underline::after {
+  content: "";
+  height: 0.6rem;
+  width: 60%;
+  background: var(--color-text);
+  position: absolute;
+  left: 0;
+  bottom: -20px;
 }
+
+// .active {
+//   border-bottom: 0.1rem solid black;
+// }

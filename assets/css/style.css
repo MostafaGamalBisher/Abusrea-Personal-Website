@@ -353,6 +353,10 @@ body {
   width: 42.7rem;
 }
 
+.skills {
+  grid-template-columns: 1fr;
+}
+
 .skills__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -376,14 +380,22 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  position: relative;
+  display: inline-block;
 }
 
 .skills__item:hover {
   text-shadow: 0px 0px 2px var(--color-green);
 }
 
-.active {
-  text-decoration: underline;
+.underline::after {
+  content: "";
+  height: 0.6rem;
+  width: 60%;
+  background: var(--color-text);
+  position: absolute;
+  left: 0;
+  bottom: -20px;
 }
 
 .media {
