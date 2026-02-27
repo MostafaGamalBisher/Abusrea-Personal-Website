@@ -40,5 +40,5 @@ list.addEventListener("click", (e) => {
     .querySelectorAll(".skills__item")
     .forEach((el) => el.classList.remove("underline"));
 
-  item.classList.toggle("underline");
+  item.classList.add("underline");
 });
