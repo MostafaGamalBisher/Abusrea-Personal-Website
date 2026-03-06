@@ -47,36 +47,77 @@ const skillsArray = [
 ];
 
 const container = document.querySelector(".skills__list");
-const currentYear = new Date().getFullYear();
 
-skillsArray.forEach((skill) => {
-  const newSkill = document.createElement("li");
+const wantedSkills = (skills) => {
+  container.innerHTML = "";
 
-  const skillTitle = document.createElement("h2");
-  skillTitle.textContent = skill.name;
+  const currentYear = new Date().getFullYear();
 
-  const years = document.createElement("span");
-  const startYear = Number(skill.experience);
-  years.textContent = `${currentYear - startYear} years`;
+  skills.forEach((skill, index) => {
+    const newSkill = document.createElement("li");
 
-  newSkill.append(skillTitle, years);
+    const skillTitle = document.createElement("h2");
+    skillTitle.textContent = skill.name;
 
-  container.appendChild(newSkill);
+    const years = document.createElement("span");
+    const startYear = Number(skill.experience);
+    years.textContent = `${currentYear - startYear} years`;
 
-  newSkill.classList.add("skills__item");
-  skillTitle.classList.add("skills__title");
-  years.classList.add("skills__years");
-});
+    newSkill.append(skillTitle, years);
+
+    container.appendChild(newSkill);
+
+    newSkill.classList.add("skills__item");
+    skillTitle.classList.add("skills__title");
+    years.classList.add("skills__years");
+
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        newSkill.classList.add("show");
+      }, index * 70);
+    });
+  });
+};
+
+wantedSkills(skillsArray);
 
 // adding click event ((underline to listElement))
 
-container.addEventListener("click", (e) => {
-  const item = e.target.closest(".skills__item");
+container.addEventListener("click", (event) => {
+  const item = event.target.closest(".skills__item");
   if (!item) return;
 
   document
     .querySelectorAll(".skills__item")
-    .forEach((el) => el.classList.remove("underline"));
+    .forEach((element) => element.classList.remove("underline"));
 
   item.classList.add("underline");
+});
+
+// filter
+
+// const allSkillsButton = document.querySelector(`[data-type="all"]`);
+// const frontendSkillsButton = document.querySelector(`[data-type="FrontEnd"]`);
+// const backendSkillsButton = document.querySelector(`[data-type="BackEnd"]`);
+
+// const allSkills = skillsArray.filter((skill) => skill.type);
+// const frontendSkills = skillsArray.filter((skill) => skill.type === "frontend");
+// const backendSkills = skillsArray.filter((skill) => skill.type === "backend");
+
+const skillsButtons = document.querySelectorAll("[data-type]");
+
+skillsButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const skillsType = e.target.dataset.type;
+
+    if (skillsType === "all") {
+      wantedSkills(skillsArray);
+      return;
+    }
+
+    const filteredSkills = skillsArray.filter(
+      (skill) => skill.type === skillsType,
+    );
+    wantedSkills(filteredSkills);
+  });
 });
