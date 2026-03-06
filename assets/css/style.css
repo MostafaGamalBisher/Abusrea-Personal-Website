@@ -398,6 +398,23 @@ body {
   bottom: -20px;
 }
 
+.filter-buttons {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin: 0 0 5rem;
+}
+.filter-buttons-button {
+  border: 0.1rem solid black;
+  background-color: transparent;
+  border-radius: 0.3rem;
+  padding: 0.2rem 1rem;
+}
+
+.skills-title {
+  margin-bottom: 1rem;
+}
+
 .media {
   justify-content: center;
   justify-self: center;
