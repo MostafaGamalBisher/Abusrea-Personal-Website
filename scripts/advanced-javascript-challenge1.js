@@ -14,6 +14,7 @@ class Laptop {
     if (this.batteryPercentage <= 10) {
       console.log("charge your battery");
     }
+    console.log(this.batteryPercentage);
   }
 
   charge() {
@@ -21,6 +22,7 @@ class Laptop {
     if (this.batteryPercentage > 100) {
       console.log(this.batteryPercentage);
       this.batteryPercentage = 100;
+      console.log(this.batteryPercentage);
     }
   }
 }
@@ -28,13 +30,11 @@ class Laptop {
 const dell = new Laptop("dell", "inspiron15", 2);
 console.log(dell);
 dell.UseSoftware();
-console.log(dell.batteryPercentage);
 // dell.charge();
-// console.log(dell.batteryPercentage);
+
+//------------------------------------------
 
 const hp = new Laptop("hp", "batets", 100);
 console.log(hp);
 hp.UseSoftware();
-console.log(hp.batteryPercentage);
 hp.charge();
-console.log(hp.batteryPercentage);
