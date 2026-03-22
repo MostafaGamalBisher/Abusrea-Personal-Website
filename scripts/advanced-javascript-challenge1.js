@@ -1,11 +1,11 @@
 class Laptop {
-  constructor(brand, model, batteryPercentage) {
+  constructor(brand, model, batteryPercentage = 100) {
     this.brand = brand;
     this.model = model;
     this.batteryPercentage = Number(batteryPercentage);
   }
 
-  UseSoftware() {
+  useSoftware() {
     this.batteryPercentage -= 15;
 
     if (this.batteryPercentage <= 0) {
@@ -29,12 +29,12 @@ class Laptop {
 
 const dell = new Laptop("dell", "inspiron15", 2);
 console.log(dell);
-dell.UseSoftware();
+dell.useSoftware();
 // dell.charge();
 
 //------------------------------------------
 
 const hp = new Laptop("hp", "batets", 100);
 console.log(hp);
-hp.UseSoftware();
+hp.useSoftware();
 hp.charge();
